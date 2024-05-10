@@ -1,0 +1,11 @@
+Data Science Tools for Analysis:
+Methodology:
+
+Techniques for Occupation Prestige Analysis:
+Methodologies for Occupation Prestige Analysis:
+
+The prestige of an occupation is a critical factor in planning for human resources, and it plays an essential role in national development planning in both the short and long term. In a country like Sri Lanka, where efficient human resource planning is crucial for driving economic growth and fostering sustainable development, understanding the factors contributing to the prestige of various occupations is vital. This understanding enables government bodies such as the Ministry of Industry and Commerce to make informed decisions on which industries and professions should be prioritized in national development plans.
+
+The data available for this analysis comes from a dataset on various occupations in Canada, including information on education, income, women's participation, prestige, census data, and occupation type. While the dataset is focused on Canada, the findings can provide valuable insights and serve as a benchmark for studying the dynamics of occupations in other countries such as Sri Lanka. The ministry plans to leverage these insights to create effective strategies for human resource management and national development.
+
+As one of the data scientists appointed to the panel tasked with providing comprehensive data science support for this initiative, my role is to analyze the data and identify the factors that contribute to the prestige of an occupation. This assignment aims to derive actionable insights that can guide decision-makers in prioritizing industries and professions, ultimately shaping the national development agenda. Through careful analysis, I will investigate the relationships between prestige and other factors, such as education, income, and gender representation, to present a report that outlines the key drivers of occupational prestige and their implications for national development planning.

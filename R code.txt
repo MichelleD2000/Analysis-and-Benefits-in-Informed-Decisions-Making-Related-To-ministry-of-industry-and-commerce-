@@ -1,0 +1,213 @@
+library(Rcmdr)
+attach(Prestige_New)
+
+getwd() 
+setwd("C:/Users/Suneth-PC/OneDrive/Desktop/BA 62 57") 
+occupations_data <- read.csv("Prestige_New.csv")
+str(occupations_data)
+summary(occupations_data)
+
+
+#Task 3
+Prestige_New_clean <- na.omit(Prestige_New)
+
+min(Prestige_New_clean$income)
+
+max(Prestige_New_clean$income)
+
+mean(Prestige_New_clean$income)
+
+median(Prestige_New_clean$income)
+
+install.packages("DescTools")
+library("DescTools")
+Prestige_New_clean <- na.omit(Prestige_New)
+Mode(Prestige_New_clean$income)
+
+#Task 4
+summary(Prestige_New_clean$prestige)
+
+summary(Prestige_New_clean$education)
+
+summary(Prestige_New_clean$income)
+
+
+
+#Task 5
+
+mean(Prestige_New_clean$prestige)
+
+median(Prestige_New_clean$prestige)
+
+var(Prestige_New_clean$prestige)
+
+hist(Prestige_New_clean$prestige, prob = TRUE, main = "Prestige Distribution", 
+     xlab = "Prestige", ylab = "Density")
+curve(dnorm(x, mean = mean(Prestige_New_clean$prestige), sd = sd(Prestige_New_clean$prestige)),
+      add = TRUE, col = "blue")
+
+
+#education
+
+mean(Prestige_New_clean$education)
+
+median(Prestige_New_clean$education)
+
+var(Prestige_New_clean$education)
+
+
+hist(Prestige_New_clean$education, prob = TRUE, main = "Education Distribution",
+     xlab = "Education", ylab = "Density")
+curve(dnorm(x, mean = mean(Prestige_New_clean$education), sd = sd(Prestige_New_clean$education)),
+      add = TRUE, col = "blue")
+
+#income
+
+mean(Prestige_New_clean$income)
+
+median(Prestige_New_clean$income)
+
+var(Prestige_New_clean$income)
+
+
+hist(Prestige_New_clean$income, prob = TRUE, main = "Income Distribution", 
+     xlab = "Income", ylab = "Density")
+curve(dnorm(x, mean = mean(Prestige_New_clean$income), sd = sd(Prestige_New_clean$income)), 
+      add = TRUE, col = "blue")
+
+
+
+# Task 6
+
+anova_result <- aov(prestige ~ type, data = Prestige_New_clean)
+
+summary(anova_result)
+
+with(Prestige_New_clean, numSummary(prestige, groups = type, statistics = c("mean", "sd")))
+
+
+# Task 7
+
+Prestige_New_clean <- na.omit(Prestige_New)
+
+attach(Prestige_New_clean)
+lm(prestige~education)
+
+# Task 8
+
+Prestige_New_clean <- na.omit(Prestige_New)
+attach(Prestige_New_clean)
+lm(prestige~income)
+
+# Task 9
+
+Prestige_New_clean <- na.omit(Prestige_New)
+
+install.packages("plyr") 
+
+library(plyr)
+detach(Prestige_New_clean)
+attach(Prestige_New_clean)
+Prestige$type<-revalue(Prestige$type, c ("prof" = 3, "bc" =2, "wc" = 1))
+write.csv(Prestige,"Prestige_New_CleanBA.csv")
+
+
+# Linear Regression 
+attach(Prestige_New_CleanBA)
+Prestige_New_CleanBA <- na.omit(Prestige_New_CleanBA)
+lm(prestige~type)
+
+
+# Task 10
+attach(Prestige_New_CleanBA)
+lm(formula = prestige ~ education + income + type, data = Prestige_New_CleanBA)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
